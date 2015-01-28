@@ -1,0 +1,176 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{ulem}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 15/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\date{\today}
+\title{Séance 15 \\ La monnaie \\[0.3cm] \small dans le cadre d'une économie fermée}
+\begin{document}
+\frame{\titlepage}
+\normalsize
+
+\frame{
+\frametitle{Les basiques}
+
+La monnaie a trois fonctions : 
+
+\begin{itemize}
+\item Moyen de paiement (standardisé, universellement accepté, transportable, divisible)
+\item Unité de compte (mesure une valeur)
+\item Réserve de valeur (stock le pouvoir d'achat dans le temps)
+\end{itemize}
+\vspace{0.3cm}
+La masse monétaire est un stock. On distingue:
+\begin{itemize}
+\item M0 = H = Base monétaire = somme des pièces et billets en circulation et réserves de billets détenues par les banques
+\item M1 =  somme des pièces et billets en circulation et dépôt à vue (monnaie scripturale) $\leftrightarrow$ moyen de paiement
+\item M2 = M1 + dépôts à 6 mois
+\item M3 = M1 + totalité des dépôts à terme
+\end{itemize}
+
+}
+
+\frame{\frametitle{Bilans}
+
+Lorsqu'une personne fait un \textbf{dépôt} d'argent à la banque, celle-ci garde une partie en \textbf{réserve} et prête le reste sous forme de  \textbf{crédits}.
+
+\begin{center}
+\begin{tabular}{p{4cm}|p{4cm}}
+\multicolumn{2}{c}{Banque}\\
+\multicolumn{1}{l}{Actif}&\multicolumn{1}{r}{Passif}\\
+\hline\\
+Trésorerie (Réserves) = R & Dépôts = $D_i$ \\
+Crédits = Cr.
+\end{tabular}
+\end{center}
+
+
+Pour une banque donnée, la proportion du dépôt à garder en réserve est déterminée par le \textbf{coefficient de trésorerie}, $c_b = \frac{R}{D_i}$\\[0.3cm]
+
+Le dépôt initial va permettre l'octroi de crédit, augmentant le stock monétaire.
+
+}
+
+\frame{\frametitle{Coefficient de trésorerie}
+\framesubtitle{Sans fuite de billets, crédits intégralement transformés en dépôts}
+\small
+A partir d'un dépôt initial $D_i$ de 100, et si le coefficient de trésorerie, $c_b$ = 0.1. La banque garde 0.1$D_i$ en réserve et prête (1-0.1)$D_i$ sous forme de crédits, qui pourront à leur tour être déposés, dont une partie sera prêtée, et déposée etc. \\[0.2cm]
+
+$D_i$ = 100\\
+Crédit 1 = 90   [=  $(1-c_b)D_i$ = 0.9*100]\\
+Crédit 2 = 81 [=$(1-c_b) (1-c_b) D_i$= 0.9*90]\\
+Crédit 3 = 72.90 [=$(1-c_b) (1-c_b) (1-c_b) D_i$= 0.9*81]\\
+...\\
+
+Le stock monétaire total = $\sum$ crédits = $D_f$ \\[0.3cm]
+
+$D_f = (1-c_b) D_i + (1-c_b)^2  D_i + (1-c_b)^3  D_i + ...  $\\
+$D_f = D_i \underbrace{ [(1-c_b)  + (1-c_b)^2  + (1-c_b)^3   + ... ]}_{\text{suite} = \frac{1}{1 - (1 - c_b) }} $\\
+\begin{block}{}
+$D_f = D_i (\frac{1}{c_b})$
+$\rightarrow c_b = \frac{D_i}{D_f}$
+\end{block}
+}
+
+\frame{\frametitle{Bilans}
+
+\footnotesize
+
+\begin{columns}
+\begin{column}{5.8cm}
+\begin{block}{Bilan d'une banque individuelle}
+\begin{center}
+\begin{tabular}{p{2.7cm}|p{2cm}}
+\multicolumn{2}{c}{Banque}\\
+\multicolumn{1}{l}{Actif}&\multicolumn{1}{r}{Passif}\\
+\hline\\
+$R = c_b D_i$ & Dépôts = $D_i$ \\
+Crédits $ = (1 - c_b) D_i$ 
+\end{tabular}
+\end{center}
+\end{block}
+\end{column}
+\begin{column}{5.8cm}
+\begin{block}{Bilan du système bancaire}
+\begin{center}
+\begin{tabular}{p{2.7cm}|p{2cm}}
+\multicolumn{2}{c}{Système bancaire}\\
+\multicolumn{1}{l}{Actif}&\multicolumn{1}{r}{Passif}\\
+\hline\\
+$R = c_b D_f$  & Dépôts = $D_f$ \\
+Crédits = $(1 - c_b) D_f$ 
+\end{tabular}
+\end{center}
+\end{block}
+\end{column}
+\end{columns}
+
+\begin{block}{Lien entre banques individuelles et le système bancaire}
+\begin{center}
+\begin{tabular}{p{5.5cm}|p{5.5cm}}
+\multicolumn{2}{c}{Système bancaire}\\
+\multicolumn{1}{l}{Actif}&\multicolumn{1}{r}{Passif}\\
+\hline\\
+$R = c_b D_f = D_i $ & Dépôts = $D_f = D_{i1} + D_{i2} + D_{i3} + ...$ \\
+Crédits = $(1 - c_b) D_f=  D_f - D_i$ 
+\end{tabular}
+\end{center}
+\end{block}
+}
+
+\frame{
+\frametitle{Offre et Demande de monnaie}
+\begin{center}
+\includegraphics[clip=true,trim = 2cm 2cm 3cm 3cm,scale=0.5]{L.pdf}
+\end{center}
+}
+
+
+\frame{
+\frametitle{Exercices supplémentaires}
+\textbf{Exercice 7}\\
+$D_f$ = 2937.5 \\
+$D_i$ = 587.5 \\[0.3cm]
+\textbf{Exercice 8}\\
+Crédit total = 3186 \\[0.3cm]
+\textbf{Exercice 9}\\
+Les propositions c) et e) sont correctes \\[0.3cm]
+\sout{\textbf{Exercice 10}}\\[0.3cm]
+\textbf{Exercice 11}\\
+Les propositions a), c), e), i), j), k), l), n) et o) sont correctes \\[0.3cm]
+}
+\end{document}

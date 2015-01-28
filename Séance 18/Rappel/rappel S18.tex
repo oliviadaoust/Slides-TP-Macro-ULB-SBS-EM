@@ -1,0 +1,147 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{ulem}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 18/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\date{29 avril 2014}
+\author{Olivia D'Aoust\\
+odaoust@ulb.ac.be}
+\title{Séance 18 \\ Equilibre macroéconomique}
+\begin{document}
+\frame{\titlepage}
+\normalsize
+
+\frame{
+\frametitle{Rappel IS-LM}
+\begin{center}
+\includegraphics[clip=true, trim = 2cm 0cm 0cm 1cm, scale=0.42]{IS-LM.pdf}
+\end{center}
+
+
+}
+
+
+\frame{
+\frametitle{\large Demande agrégée cohérente avec l'équilibre monétaire $Y_d$}
+
+A partir d'IS-LM, on établit une relation entre l'output Y et le niveaux des prix P, telle que les marchés sont à l'équilibre.
+
+\begin{center}
+\includegraphics[clip=true, trim = 2cm 0cm 0cm 1cm, scale=0.35]{DA.pdf}
+\end{center}
+
+
+}
+
+\frame{
+\frametitle{\large Offre agrégée cohérente avec l'équilibre sur le marché du travail $Y_s$ }
+
+On ajoute au modèle l'équilibre sur le marché du travail afin d'établir une relation de long terme entre l'output Y et le niveaux des prix P.
+
+\begin{center}
+\includegraphics[clip=true, trim = 2cm 0cm 0cm 1cm, scale=0.35]{OA.pdf}
+\end{center}
+
+}
+
+\frame{
+\frametitle{Equilibre macroéconomique de long terme}
+
+A long terme, l'offre agrégée est inélastique par rapport aux prix. L'équilibre macroéconomique suppose que le plein emploi (et donc le maximum des capacités de production) est atteint sur le marché du travail (qui est à l'équilibre).
+
+\begin{center}
+\includegraphics[clip=true, trim = 5cm 5cm 5cm 5.4cm, scale=0.6]{eq.pdf}
+\end{center}
+
+}
+
+\frame{
+\frametitle{A court terme}
+\small
+L'offre de travail peut être différente de celle du plein emploi en raison de ...\\[0.08cm]
+
+1) \textbf{la rigidité des salaires ($Y^{CT}_s < Y^{LT}_s$)}\\
+\it{\footnotesize{Suite à une \emph{baisse} des prix (et une hausse de $w_r$), le salaire nominal est rigide à la baisse. Il y a un excès d'offre de travail sur ce marché.}}
+\begin{center}
+\includegraphics[clip=true, trim = 5cm 5cm 5cm 5cm, scale=0.6]{ysCT.pdf}
+\end{center}
+
+}
+
+\frame{
+\frametitle{A court terme}
+\small
+L'offre de travail peut être différente de celle du plein emploi en raison de ...\\[0.08cm]
+
+2) \textbf{l'illusion monétaire ($Y^{CT}_s > Y^{LT}_s$)}\\
+\it{\footnotesize{Suite à une \emph{hausse} des prix (et une baisse de $w_r$), les agents ne s'adaptent pas et maintiennent leur offre d'emploi}}
+\begin{center}
+\includegraphics[clip=true, trim = 5cm 5cm 5cm 5cm, scale=0.6]{ysLT.pdf}
+\end{center}
+
+}
+
+
+\frame{
+\frametitle{Exercices supplémentaires}
+\footnotesize
+\textbf{Exercice 6}\\
+a) F\\
+b) I\\
+c) G\\
+d) L\\
+e) A\\
+f) C\\[0.3cm]
+
+\textbf{Exercice 7}\\
+
+a) situation initiale en $y_4, i_3$ \\
+b) Après $\Delta^+$P, en absence d'effet d'encaisses réelles: on est en $y_3, i_4, P_2$\\
+c) Après $\Delta^+$P, en présence d'effet d'encaisses réelles: on est en $y_1, i_2, P_2$\\[0.3cm]
+
+\textbf{Exercice 8}\\
+Les propositions a) et c) sont correctes. \\
+e) 2\\
+f) 3\\
+g) 6\\[0.3cm]
+
+\textbf{Exercice 9}\\
+Les propositions a), b), c), d), e), g), h), m), p) et r) sont correctes \\[0.3cm]
+}
+
+
+\end{document}

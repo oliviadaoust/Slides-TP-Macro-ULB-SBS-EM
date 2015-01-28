@@ -1,0 +1,196 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 13/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\date{\today}
+\title{Séance 13 \\ Demande agrégée intérieure \\ (C + I + G)}
+\begin{document}
+\frame{\titlepage}
+\frame{
+\frametitle{Fonction de consommation Keynésienne}
+La consommation est une fonction linéaire du revenu disponible
+\begin{equation}\nonumber
+C = a + c Y_d
+\end{equation}
+Le revenu disponible équivaut à la consommation et l'épargne
+\begin{equation}\nonumber
+Y_d = C + S
+\end{equation}
+La propension marginale à consommer indique pour chaque augmentation du revenu disponible d'un \euro, l'augmentation de consommation du ménage. \\[0.2cm]
+On la calcule en calculant la dérivée de la consommation par rapport au revenu disponible (comme la fonction est linéaire, c'est la pente de la fonction, c).
+\begin{equation}\nonumber
+\begin{array}{ll}
+\mbox{Soit C, la consommation} & C = a + c Y_d\\[0.2cm]
+\mbox{La propension marginale à consommer} &\frac{dC}{dYd} = c
+\end{array}
+\end{equation}
+}
+\frame{
+\frametitle{Décision intertemporelle de consommation}
+\textbf{Notations : }
+\begin{itemize}
+\item $W_t$ = richesse (de \emph{Wealth} en anglais) en t (aujourd'hui) 
+\item $W_{t+1}$ = richesse en t+1 (demain)
+\item r = taux d'intérêt réel (taux d'intérêt nominal (i) corrigé du taux d'inflation ($\pi)$, $i = r + \pi$)\\[0.3cm]
+\end{itemize}
+\textbf{Intuitions:}\\
+\begin{itemize}
+\item Si j'épargne toute ma richesse $W_t$ aujourd'hui, elle me rapporte des intérêts ($r W_t$), j'ai donc $(1+r)W_t$ demain.
+\item Si j'ai le choix entre 100 euros aujourd'hui ou 110 euros demain, je dois pouvoir comparer les deux sommes. La \textbf{valeur actualisée} d'une somme dans le futur est égale au montant dont j'aurais besoin aujourd'hui, étant donné le taux d'intérêt, pour obtenir la somme dans le futur.
+\end{itemize}
+}
+\frame{
+\frametitle{Décision intertemporelle de consommation}
+Si on considère un individu qui vit 2 périodes, et dépense tout avant de mourir... Il consomme en 2ème période ce qu'il a gagné en 2ème période, et ce qu'il a épargné en 1ère période, plus les intérêts.
+\begin{equation}\nonumber
+C_2 = Y_{d2} + (Y_{d1} - C_1)(1+r)
+\end{equation}
+On peut réécrire 
+\begin{equation}\nonumber
+C_1 + \frac{C_2}{1+r} = \underbrace{Y_{d1} + \frac{Y_{d2}}{1+r}}_{\text{\parbox{11em}{Valeur actualisée des revenus disponibles}}} = W
+\end{equation}
+On peut réécrire $C_1 + \frac{C_2}{1+r} = W$ comme une fonction qui lie la décision de consommation de demain à celle d'aujourd'hui étant donné la valeur actualisée des revenus. C'est la "contrainte budgétaire intertemporelle".
+\begin{equation}\nonumber
+C_2 = (1+r) W - (1+ r)C_1
+\end{equation}
+}
+\frame{
+\frametitle{Décision intertemporelle de consommation}
+\framesubtitle{Graphiquement}
+\centering
+\includegraphics[clip=true,trim = 2cm 2cm 0cm 2cm,scale=0.45]{CBI.pdf}\\
+}
+\frame{
+\frametitle{Décision intertemporelle de consommation}
+\framesubtitle{Evolution du taux d'intérêt}
+Si le taux d'intérêt change, la contrainte budgétaire intertemporelle pivote autour du point auquel les ménages dépensent tout leur revenu disponible à chaque période (l'épargne est nulle, et donc les décisions ne sont pas affectées par $\Delta r$) \\[0.3cm]
+Si le taux d'intérêt augmente ($r_2 > r_1$), 1 euro épargné rapporte plus, et la courbe pivote pour que $ w (1+ r_2) > w (1+ r_1)$ et inversement si le taux d'intérêt diminue. 
+\begin{columns}
+\begin{column}[c]{6cm}
+\centering
+\includegraphics[clip=true,trim = 2cm 2cm 3cm 2cm,scale=0.25]{augR.pdf}\\
+\end{column}
+\begin{column}[c]{8cm}
+\includegraphics[clip=true,trim = 2cm 2cm 3cm 2cm,scale=0.25]{dimR.pdf}
+\end{column}
+\end{columns}
+}
+\frame{
+\frametitle{Décision intertemporelle de consommation}
+\framesubtitle{Effet substitution / Effet Revenu}
+L'impact d'$\Delta r$ sur les décisions de consommation dépend du type de consommateur, càd qu'il soit prêteur ou emprunteur \\[0.2cm]
+Si le taux d'intérêt augmente,
+\begin{itemize}
+\item Pour un prêteur (épargnant, $S_1 > 0$)
+\begin{itemize}
+\item ER : son épargne lui rapporte plus, il peut donc consommer plus aujourd'hui
+\item ES : en consommant aujourd'hui, il renonce à de l'épargne qui lui rapporte plus, il consomme donc moins aujourd'hui 
+\end{itemize}
+\item Pour un emprunteur ($S_1 < 0$),
+\begin{itemize}
+\item ER : ses dettes lui coutent plus cher, il consomme donc moins aujourd'hui
+\item ES : consommer aujourd'hui lui coûte relativement cher, il réduit donc sa consommation aujourd'hui
+\end{itemize}
+\end{itemize}
+}
+\begin{frame}[allowframebreaks]
+\frametitle{Investissements privés}
+Le capital d'une entreprise évolue au cours du temps, on a 
+\begin{equation}
+K_{t+1} = I_t + K_t (1 - d)
+\end{equation}
+le capital demain est égal aux investissements aujourd'hui, plus le capital d'aujourd'hui, net de la dépréciation (une machine neuve vaut plus qu'une machine usée). A l'équilibre, $K_t$ = $K_t$ = $K^*$ et (1) peut être réécrite 
+\begin{equation}
+I = dK^*
+\end{equation}
+L'investissement observé est l'investissement de remplacement.\\[0.3cm]
+\break
+Quelle est le niveau de capital optimal $K^*$ ? \\[0.5cm]
+Si on considère une fonction de production qui ne dépend que du capital , f(K), l'entreprise choisit le niveau de capital K qui maximise la valeur actualisé du capital V (on considère 2 périodes ici):
+\begin{equation}\nonumber
+\max_K V = - K + \frac{f(K)}{1+r} + \frac{(1 - d) K}{1+r}
+\end{equation}
+\begin{equation}\nonumber
+\frac{\partial V}{\partial K} = 0 \rightarrow f'(K) = r + d
+\end{equation}
+\centering
+La productivité marginale du capital = coût marginal du capital 
+\end{frame}
+\frame{
+\frametitle{Dépenses publiques et coût distortionnaires}
+\includegraphics[clip=true,trim = 3.3cm 1.5cm 3cm 7.3cm,scale=0.55]{CD.pdf}
+}
+\frame{
+\frametitle{Contrainte budgétaire intertemporelle de l'Etat}
+Si on considère l'Etat durant 2 périodes, et que le budget doit être en équilibre à la fin de la seconde période. Le déficit en période 1 ($G_1 - T_1 > 0$) est financé par un emprunt, remboursé avec intérêt en période 2, au cours de laquelle l'Etat réalise des dépenses $G_2$ et taxe les ménages $T_2$ pour être à l'équilibre. On a 
+\begin{equation}\nonumber
+T_2 = G_2 + (1+r) (G_1 - T_1)
+\end{equation}\\[0.2cm]
+Si l'Etat est en surplus, $G_1 - T_1 < 0$ permet un déficit en 2ème période, financé par l'épargne publique réalisée en première période.\\[0.2cm]
+En réarrangeant les termes, on obtient la contrainte budgétaire intertemporelle de l'Etat
+\begin{equation}\nonumber
+T_1 + \frac{T_2}{1+r} = G_1 + \frac{G_2}{1+r} 
+\end{equation}\\[0.2cm]
+}
+\frame{
+\frametitle{Contrainte budgétaire intertemporelle de l'Etat avec dettes publiques initiales}
+Dans cette situation, on considère que l'Etat a une dette publique initiale, en t = 0. S'écoule ensuite les deux périodes. Le déficit en première période est composé du \textbf{déficit primaire} et du \textbf{service de la dette}
+\begin{equation}\nonumber
+\text{Déficit public} = \underbrace{G_1 - T_1}_{\text{Déficit primaire}} +\underbrace{ r D_0}_{\text{Service de la dette}}
+\end{equation}\\[0.2cm]
+En deuxième période, le budget doit être équilibré, et les taxes doivent couvrir les dépenses de l'année en cours, le déficit de l'année précédente et rembourser le montant initialement emprunté (\emph{le principal}) avec intérêts 
+\begin{equation}\nonumber
+T_2 = G_2 + (1+r) \underbrace{(G_1 - T_1 + r D_0)}_{\text{Déficit public}} + (1+r)D_0
+\end{equation}\\[0.2cm]
+\scriptsize{On peut réécrire $T_2 = G_2 + (1+r) (G_1 - T_1) + (1+r)^2 D_0$. Le dernier terme vient du fait que si l'on contracte une dette $D_0$ en période 0, la dette, augmentée des intérêts, devient $(1+r) D_0$ en période 1, et $(1+r)(1+r) D_0 = (1+r)^2 D_0$ en période 2.}
+}
+\frame{
+\frametitle{Exercices supplémentaires}
+\textbf{Exercice 8}\\
+$C_1$ = 15 000 \\
+$C_2$ = 64 500 \\
+$C_3$ = 19 500 \\
+Héritage = 12 000 \\[0.2cm]
+Les propositions b), d) sont correctes \\[0.3cm]
+\textbf{Exercice 9}\\
+$T_2$ = 264.5 milliards d'\euro\\[0.3cm]
+\textbf{Exercice 10}\\
+Les propositions a) et d) sont correctes \\[0.3cm]
+\textbf{Exercice 11}\\
+Les propositions a), g), h), j) et n) sont correctes \\[0.3cm]
+}
+\end{document}

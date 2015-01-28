@@ -1,0 +1,170 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{ulem}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 16/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\date{\today}
+\title{Séance 16 \\ Monnaie et taux de change \\[0.3cm] \small dans le cadre d'une économie ouverte}
+\begin{document}
+\frame{\titlepage}
+\normalsize
+
+\frame{
+\frametitle{Les basiques}
+\framesubtitle{Attention, prendre le bon point de vue!}
+
+\begin{columns}
+\begin{column}{5cm}
+Taux de change de l'\euro, e = $\frac{\mbox{\$}}{\mbox{\euro}}$\\
+e = 1.34 : pour 1\euro, j'ai 1.34\$\\[2cm]
+
+Alors\\[1.5cm]
+
+De la perspective du \$, $\frac{1}{e}$ = $\frac{\mbox{\euro}}{\mbox{\$}}$\\
+$\frac{1}{e} = \frac{1}{1.33}$ = 0.75 : \\pour 1\$, j'ai 0.75\euro
+
+\end{column}
+
+\begin{column}{5cm}
+\includegraphics[clip=true, trim = 2cm 4cm 2cm 3cm, scale=0.25]{euro.pdf}
+\vspace{0.7cm}
+\includegraphics[clip=true, trim = 2cm 4cm 2cm 3cm, scale=0.25]{dollar.pdf}
+\end{column}
+\end{columns}
+
+}
+
+\frame{
+\frametitle{Système de taux de change}
+
+\begin{enumerate}
+\item Taux de change fixe
+\begin{itemize}
+\item $e_{constant}$
+\item Les BC interviennent (achat/vente de devises) lors de déséquilibre, pour que le taux de change retrouve sa valeur d'équilibre
+\end{itemize}
+\item Taux de change flottant
+\begin{itemize}
+\item Taux de change d'équilibre sur le marché des change
+\end{itemize}
+\end{enumerate}
+}
+
+\frame{
+\frametitle{Rendement des placements}
+
+\small
+Notations :  exposant * dénote la variable à l'étranger, $\hat{e}$ indique la croissance du taux de change du pays/de la région domestique (i.e. appréciation (croissance positive) ou dépréciation (croissance négative))
+
+\normalsize
+
+\begin{block}{Rendement d'un placement domestique}
+Dépend du taux d'intérêt : 1+ R = 1 + i 
+\end{block}
+
+\begin{block}{Rendement d'un placement à l'étranger}
+Dépend du taux d'intérêt, et du taux de change : 
+\begin{equation}\nonumber
+1+R = \frac{1+ i^*}{1+\hat{e}}
+\end{equation}
+\end{block}
+
+Pour éviter l'arbitrage, les rendements doivent être égaux :
+
+\begin{equation}\nonumber
+1+ i = \frac{1+ i^*}{1+\hat{e}}
+\end{equation}
+}
+
+
+
+\frame{
+\frametitle{Marshall-Lerner}
+\small
+Suite à une dépréciation de la \textsterling \hspace{0.1cm} ($e= \frac{\mbox{\euro}}{\mbox{\textsterling}}$ diminue)\\[0.2cm]
+\underline{La demande de \textsterling}
+\begin{itemize}
+\item \textit{Effet prix:} Les produits anglais coûtent moins cher
+\item \textit{Effet volume:} La Belgique va davantage importer des produits anglais. 
+\item Le coût total des importations augmente si la demande de produits anglais est suffisamment élastique aux prix (effet volume l'emporte), et la \textbf{demande} de \textsterling, qui sert à payer les importations, augmente
+\end{itemize}
+
+\underline{L'offre de \textsterling}
+\begin{itemize}
+\item \textit{Effet prix:}  Les produits belges coutent plus cher, car l'\euro \hspace{0.1cm} s'est apprécié
+\item \textit{Effet volume:} Les exportations vont diminuer. 
+\item Les recettes des exportations diminuent si la demande d'exportation est suffisamment élastique (effet volume l'emporte), et l'\textbf{offre} de \textsterling, provenant des recettes d'exportation, \hspace{0.1cm}diminue
+\end{itemize}
+
+\begin{block}{}
+ La condition de Marshall Lerner veut que la somme des élasticités (des demandes d'exportations et d'importations) soit supérieure à 1.
+\end{block}
+
+}
+
+\frame{
+\frametitle{Taux de change réel}
+
+Le taux de change réel prend en compte le différentiel d'inflation entre deux pays:\\[0.3cm]
+
+$TCR = e \frac{P}{P^*}$\\[0.3cm]
+
+A taux de change nominal e constant, 
+\begin{itemize}
+\item on observe une dépréciation réelle de l'\euro\hspace{0.1cm} si l'inflation est plus importante à l'étranger qu'en Europe, et la compétitivité européenne s'améliore. 
+\item on observe une appréciation réelle de l'\euro\hspace{0.1cm} si l'inflation est plus importante en Europe qu'à l'étranger, et la compétitivité européenne se détériore. 
+\end{itemize}
+
+}
+
+
+\frame{
+\frametitle{Exercices supplémentaires}
+\textbf{Exercice 7}\\
+$i_{europe}$ = 9.1\%   \\[0.3cm]
+\textbf{Exercice 8}\\
+Taux de change réel en \\
+1982 = 0.253\\
+1983 = 0.275\\
+1984 = 0.274\\
+1985 = 0.265\\
+1986 = 0.303\\
+1987 = 0.316\\[0.3cm]
+\textbf{Exercice 9}\\
+Les propositions d), g) et l) sont correctes \\[0.3cm]
+}
+\end{document}

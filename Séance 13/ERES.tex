@@ -1,0 +1,405 @@
+\documentclass[11pt]{article}
+\usepackage{bibentry}
+\usepackage[greek,french]{babel}
+\usepackage[LGR,T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{eurosym}
+\usepackage[center]{caption}
+\usepackage[curve,frame,cmtip,line,rotate,color,matrix,arrow,graph]{xy}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{vmargin}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{empheq}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage[scaled=.92]{helvet}
+\renewcommand{\rmdefault}{phv}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usepackage{subfloat}
+\usepackage{subfig}
+\usepackage{makebox}
+
+\title{Effet substitution et effet revenu dans la décision intertemporelle de consommation}
+\author{Olivia D'Aoust}
+\date{Séminaire d'actualité économique}
+
+
+\begin{document}
+\maketitle
+
+\section{Rappels et intuitions}
+
+\noindent \textbf{Quelques notations: }\\
+
+\begin{itemize}
+\item $W$ = richesse (de \emph{Wealth} en anglais)
+\item $Y_{dt}$ = revenu disponible à la période t
+\item $C_t$ = Consommation à la période t
+\item r = taux d'intérêt réel (taux d'intérêt nominal (i) corrigé pour l'inflation ($\pi)$, $i = r + \pi$)\\[0.3cm]
+\end{itemize}
+
+\noindent \textbf{Valeur actualisée}\\
+\begin{itemize}
+\item Si j'épargne toute mon revenu $Y_t$ aujourd'hui, il me rapporte des intérêts ($r Y_t$), j'ai donc $(1+r)Y_t$ demain.
+\item Si j'ai le choix entre 100 euros aujourd'hui ou 110 euros demain, je dois pouvoir comparer les deux sommes. La \textbf{valeur actualisée} d'un montant est égale au montant dont j'aurais besoin aujourd'hui pour obtenir la somme dans le futur étant donné le taux d'intérêt.\\
+\end{itemize}
+
+\noindent \emph{Question:} Entre ces deux possibilités, si le taux d'intérêt réel est de 10\%, laquelle choisiriez-vous ? Et si le taux d'intérêt diminue à 1\%. 
+
+\begin{itemize}
+\item 140 euros aujourd'hui
+\item 150 euros demain\\
+\end{itemize}
+
+\noindent \textbf{Consommation intertemporelle}\\
+
+Si on considère un individu qui vit 2 périodes, et dépense tout avant de mourir... Il consomme en 2ème période ce qu'il a gagné en 2ème période, et ce qu'il a épargné en 1ère période, plus les intérêts sur son épargne.
+
+\begin{equation}\label{c2}
+C_2 = Y_{d2} + (Y_{d1} - C_1)(1+r)
+\end{equation}
+
+On peut réécrire \eqref{c2} pour isoler la consommation et le revenu disponible de part et d'autre :
+
+\begin{equation}\label{cbi}
+C_1 + \frac{C_2}{1+r} = \underbrace{Y_{d1} + \frac{Y_{d2}}{1+r}}_{\text{\parbox{11em}{Valeur actualisée des revenus disponibles}}} 
+\end{equation}
+
+Si on dénote la valeur actualisée des revenus disponible comme W, on peut réécrire \eqref{cbi} comme 
+
+\begin{equation}\label{cbi2}
+C_1 + \frac{C_2}{1+r} = W
+\end{equation}
+
+Ensuite, on réordonne \eqref{cbi2} pour avoir une fonction qui lie la décision de consommation de demain à celle d'aujourd'hui étant donné la valeur actualisée des revenus. C'est la "contrainte budgétaire intertemporelle" :
+
+\begin{equation}\label{c2c1}
+C_2 = (1+r) W - (1+ r)C_1
+\end{equation}
+
+Cette relation peut être représentée graphiquement, comme à la figure suivante \ref{cbifig}.
+
+\begin{figure}[h!]
+\caption{Contrainte budgétaire intertemporelle}\label{cbifig}
+\begin{center}
+\begin{tikzpicture}
+
+\draw [-,samples=100,domain=0:4.5] plot(\x,4.5-1*\x) node[left]{};
+
+\draw[-*] (2,4.5-1*2) -- (2,4.5-1*2) node[below] {};
+
+
+\draw[dashed,-] (2,0) -- (2,2.5) node[left] {};
+\draw[dashed,-] (0,2.5) -- (2,2.5) node[left] {};
+
+
+\draw[->] (-0.2,0) -- (6,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,6) node[left] {$C_2$};
+
+\draw (4.5,0) node[below]{$W$};
+\draw (0,4.5) node[left]{$(1+r) W$};
+\draw (0,2.5) node[left]{$Y_{d2}$};
+\draw (2,0) node[below]{$Y_{d1}$};
+\draw (6,1) node[left]{pente: -(1+r)};
+
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[clip=true,trim = 2cm 2cm 0cm 2cm,scale=0.45]{CBI.pdf}\\
+%\end{figure}
+
+Si le taux d'intérêt change, la contrainte budgétaire intertemporelle (équation \eqref{c2c1}) pivote autour du point auquel les ménages dépensent tout leur revenu disponible à chaque période (à ce point, l'épargne est nulle, et donc les décisions ne sont pas affectées par $\Delta r$). Graphiquement, la pente et l'ordonnée à l'origine sont modifiées.\\
+
+Si le taux d'intérêt diminue ($r_2 < r_1$), 1 euro épargné rapporte moins, et la courbe pivote pour que $ w (1+ r_2) < w (1+ r_1)$, et la pente de la contrainte budgétaire est plus faible. Inversement si le taux d'intérêt augmente jusque $r_3 > r_1$, l'ordonnée à l'origine augmente, et la pente de la contrainte est plus forte. Ces deux cas sont représentés graphiquement à la figure \ref{dint}.\\
+
+\begin{figure}[h!]
+\caption{Variation du taux d'intérêt}\label{dint}
+\begin{center}
+\begin{tikzpicture}
+%tourner autour de 2,2.5
+
+% y = 4.5 - x 
+% 2.5 = 4 - 2*p
+% 2.5 = 5 - 2*p
+\draw [-,samples=100,domain=0:4/(1.5/2),dotted,red,ultra thick] plot(\x,4-1.5/2*\x) node[left]{};
+\draw [-,samples=100,domain=0:5.5/(3/2),dotted,green,ultra thick] plot(\x,5.5-3/2*\x) node[left]{};
+
+\draw [-,samples=100,domain=0:4.5] plot(\x,4.5-1*\x) node[left]{};
+\draw[-*] (2,4.5-1*2) -- (2,4.5-1*2) node[below] {};
+
+
+\draw[dashed,-] (2,0) -- (2,2.5) node[left] {};
+\draw[dashed,-] (0,2.5) -- (2,2.5) node[left] {};
+
+
+\draw[->] (-0.2,0) -- (6,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,6) node[left] {$C_2$};
+
+
+\draw (0,4.5) node[left]{\footnotesize{$(1+r_1) W$}};
+\draw (0,4) node[left]{\footnotesize{$(1+r_2) W$}};
+\draw (0,5.5) node[left]{\footnotesize{$(1+r_3) W$}};
+\draw (0,2.5) node[left]{$Y_{d2}$};
+\draw (2,0) node[below]{$Y_{d1}$};
+%\draw (6,1) node[left]{pente: -(1+r)};
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[clip=true,trim = 2cm 2cm 3cm 2cm,scale=0.25]{augR.pdf}\\
+%\end{figure}
+%
+%\begin{figure}[h]
+%\centering
+%\includegraphics[clip=true,trim = 2cm 2cm 3cm 2cm,scale=0.25]{dimR.pdf}
+%\end{figure}
+
+
+L'impact d'un changement de taux d'intérêt sur les décisions de consommation dépend du type de consommateur, c'est-à-dire qu'il soit épargnant ou emprunteur. \\
+
+Un épargnant ne consomme pas tout son revenu disponible aujourd'hui, il en épargne une partie aujourd'hui, qui lui rapporte des intérêts. Comme il ne vit que deux périodes, il consommera demain son revenu disponible demain, et ce qu'il a épargné aujourd'hui, plus les intérêts. Pour un épargnant, $C^*_1 < Y_{d1}$ et $S^*_1 > 0$, et graphiquement, on se situe à gauche du point ($Y_{d1}, Y_{d2}$).\\
+
+Inversement, un emprunteur s'endette aujourd'hui et consomme plus que son revenu disponible, $C^*_1 > Y_{d1}$ et $S^*_1 < 0$. Il devra rembourser ses dettes demain, augmentées d'intérêts.\\
+
+Graphiquement, ajoutons les courbes d'indifférences du consommateur pour distinguer l'épargnant de l'emprunteur (Figure \ref{conso}).\\
+
+
+\begin{figure}[h!]
+\centering
+\caption{Fonction d'utilité de consommation intertemporelle}\label{conso}
+\subfigure[L'épargnant]{%
+
+\begin{tikzpicture}
+
+% y = 4.5 - x 
+
+% à 2,2.5
+
+\draw [-,samples=100,domain=0:4.5] plot(\x,4.5-1*\x) node[left]{};
+\draw[blue,domain=0.5:4] plot (\x,{6*exp(-1.5*\x)+(3 - 6*exp(1.5*-1.5))}) ;
+
+\draw[-*] (2,4.5-1*2) -- (2,4.5-1*2) node[below] {};
+
+
+\draw[dashed,-] (2,0) -- (2,2.5) node[left] {};
+\draw[dashed,-] (0,2.5) -- (2,2.5) node[left] {};
+
+\draw[->] (-0.2,0) -- (5,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,5) node[left] {$C_2$};
+
+\draw (4.5,0) node[below]{$W$};
+\draw (0,4.5) node[left]{$(1+r) W$};
+\draw (0,2.5) node[left]{$Y_{d2}$};
+\draw (2,0) node[below]{$Y_{d1}$};
+
+\draw (0,3) node[left]{$C^*_{2}$};
+\draw (1.3,0) node[below]{$C^*_{1}$};
+
+\draw[dashed,-] (1.5,0) -- (1.5,3) node[left] {};
+\draw[dashed,-] (0,3) -- (1.5,3) node[left] {};
+
+\end{tikzpicture}
+}
+\hspace{-0.4cm}
+\subfigure[L'emprunteur]{%
+\begin{tikzpicture}
+
+\draw [-,samples=100,domain=0:4.5] plot(\x,4.5-1*\x) node[left]{};
+\draw[blue,domain=0.5:4] plot (\x+1.5,{6*exp(-1.5*\x)+(1.5 - 6*exp(1.5*-1.5))}) ;
+
+\draw[-*] (2,4.5-1*2) -- (2,4.5-1*2) node[below] {};
+
+
+\draw[dashed,-] (2,0) -- (2,2.5) node[left] {};
+\draw[dashed,-] (0,2.5) -- (2,2.5) node[left] {};
+
+\draw[->] (-0.2,0) -- (5,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,5) node[left] {$C_2$};
+
+\draw (4.5,0) node[below]{$W$};
+\draw (0,4.5) node[left]{$(1+r) W$};
+
+\draw (0,2.5) node[left]{$Y_{d2}$};
+\draw (2,0) node[below]{$Y_{d1}$};
+
+\draw (0,1.3) node[left]{$C^*_{2}$};
+\draw (3,0) node[below]{$C^*_{1}$};
+
+\draw[dashed,-] (3,0) -- (3,1.5) node[left] {};
+\draw[dashed,-] (0,1.5) -- (3,1.5) node[left] {};
+
+\end{tikzpicture}
+
+}
+\end{figure}
+
+
+
+
+
+%\begin{figure}[h!]
+%\caption{L'épargant}
+%\begin{center}
+%\end{center}
+%\end{figure}
+%
+%\begin{figure}
+%\caption{L'emprunteur}
+%\begin{center}
+%\end{center}
+%\end{figure}
+
+\noindent \emph{Question:} Considérez ces deux cas extrêmes :
+
+\begin{itemize}
+\item $C_2 = (1+r) W$
+\item $C_1 = W $
+\end{itemize}
+
+\noindent Expliquez en mots ce qu'ils veulent dire. Lequel correspond à un épargnant, et lequel correspond à un emprunteur ?\\
+
+\section{Effet substitution et effet revenu}
+
+Si le taux d'intérêt change, la droite du budget se déplace non-parallèlement autour du point  ($Y_{d1}, Y_{d2}$). Cela implique un déplacement de l'équilibre, qui résulte d'un double effet sur la consommation \textbf{présente}: un effet substitution, et un effet revenu.  \\
+
+Pour une hausse du taux d'intérêt, \underline{l'effet revenu} découle du fait que le ménage épargnant se sent plus riche, tandis que le ménage emprunteur se sent plus pauvre. En effet, l'épargne de l'épargnant lui rapporte plus d'intérêts, tandis que l'emprunteur devra rembourser ses dettes à un taux plus élevé, ce qui lui coutera plus cher. Tout enrichissement ou appauvrissement a une implication sur la consommation. L'épargnant, étant plus riche, consommera plus ; l'emprunteur, étant plus pauvre, consommera moins. On peut en conclure que l'effet revenu sur la consommation de l'épargnant est positif, tandis que l'effet revenu sur la consommation de l'emprunteur est négatif. \\
+
+L'autre effet engendré par un changement du taux d'intérêt est \underline{l'effet substitution}. Cet effet se mesure en terme de coût d'opportunité du transfert de la consommation d'aujourd'hui vers demain. On peut voir le taux d'intérêt comme une récompense de la renonciation à consommer aujourd'hui. Tant pour le prêteur que pour l'emprunteur, un taux d'intérêt plus élevé incite à l'épargne (qui rapporte plus), et a donc un impact négatif sur la consommation. On peut conclure que l'effet substitution sur la consommation de l'épargnant et de l'emprunteur est négatif.\\
+
+Le signe des effets revenu et substitution sur l'épargne est inversé. A revenu disponible inchangé, une augmentation de la consommation implique nécessairement une diminution de l'épargne, et inversement.\\
+
+L'impact global d'un changement du taux d'intérêt sur la consommation (ou l'épargne) dépendra du sens de la variation du taux d'intérêt (augmentation ou diminution), et du type d'agent que l'on considère (épargnant ou emprunteur). Pour l'épargnant, les effets substitution et revenu vont dans des sens opposés, et on ne peut donc pas conclure directement quel sera l'effet d'une variation du taux d'intérêt sur sa décision de consommation (et d'épargne).\\
+
+Il est possible de représenter graphiquement ces deux effets. Considérez un épargnant tel qu'à la figure \ref{conso}(a), et une augmentation du taux d'intérêt de $r$ à $r^\prime$. A la figure \ref{base}, on observe que l'augmentation du taux d'intérêt engendre une rotation de la contrainte budgétaire, et on passe de l'équilibre E1 à l'équilibre E2, la nouvelle droite du budget permettant d'atteindre une autre courbe d'indifférence. On observe que globalement, la consommation aujourd'hui diminue ($C^{\prime *}_1 < C^{*}_1$), l'effet substitution domine l'effet revenu dans ce cas de figure. \\
+
+A la figure \ref{dec}, l'effet substitution et l'effet revenu sont décomposés. Pour enlever l'effet revenu de l'effet global, et isoler l'effet substitution, partons de E2, l'équilibre d'arrivée, et transposons parallèlement la droite de budget vers le bas, jusqu'à toucher la courbe d'indifférence initiale. Ce mouvement est représenté par la droite rouge pointillée, qui est tangente à la courbe d'indifférence initiale au point A. Cette translation de la droite représente un pure effet revenu (la différence entre la droite rouge et la droite bleue, c'est une augmentation de la richesse W, autrement dit, un effet revenu). En enlevant l'effet revenu, il ne reste que l'effet substitution : la différence de consommation entre E1 et A.\\
+
+En partant de l'équilibre initial au point E1, l'effet substitution est négatif, et nous amène au point A. L'effet revenu positif est représenté par un déplacement de la droite rouge vers la droite bleue, et nous amène de A en E2. L'effet global est un passage de E1 en E2, où, à la suite d'une hausse du taux d'intérêt, la consommation présente diminue au profit de l'épargne.\\
+
+\begin{figure}[h!]
+\caption{Augmentation du taux d'intérêt}\label{base}
+\begin{center}
+\vspace{-0.5cm}
+\begin{tikzpicture}
+
+\draw [-,samples=100,domain=0:12] plot(\x,3-1/4*\x) node[left]{};
+
+\draw [-,samples=100,domain=0:6,blue,ultra thick] plot(\x,6-1*\x) node[left]{};
+
+\draw[black,domain=0.5:4] plot (\x-0.2,{4*exp(-1.5*\x)+(2.78 - 4*exp(1.5*-1.5))}) ;
+\draw[blue,domain=0.5:4,ultra thick] plot (\x-0.2,{4*exp(-1.5*\x)+(4.76 - 4*exp(1.5*-1.5))}) ;
+
+
+\draw[-*] (4,2) -- (4,2) node[below] {};
+\draw (0,2) node[left]{$Y_{d2}$};
+\draw (4,0) node[below]{$Y_{d1}$};
+\draw[dashed,-] (4,0) -- (4,2) node[left] {};
+\draw[dashed,-] (0,2) -- (4,2) node[left] {};
+
+\draw[->] (-0.2,0) -- (13,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,7) node[left] {$C_2$};
+
+\draw (0,3) node[left]{$(1+r) W$};
+\draw (0,6) node[left]{$(1+r^\prime) W$};
+
+
+\draw (2,0) node[below]{$C^*_{1}$};
+\draw[-*] (2,2.5) -- (2,2.5) node[above] {E1};
+\draw[dashed,-] (2,0) -- (2,2.5) node[left] {};
+
+
+\draw[blue] (1.1,0) node[below]{$C^{*\prime}_{1}$};
+\draw[-*,blue] (1.1,4.9) -- (1.1,4.9) node[above] {E2};
+\draw[dashed,-,blue] (1.1,0) -- (1.1,4.9) node[left] {};
+
+
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\vspace{-0.5cm}
+
+
+\begin{figure}[h!]
+\caption{Effet substitution, Effet revenu}\label{dec}
+\begin{center}
+\vspace{-0.5cm}
+
+\begin{tikzpicture}
+
+\draw [-,samples=100,domain=0:12] plot(\x,3-1/4*\x) node[left]{};
+
+\draw [-,samples=100,domain=0:6,blue,ultra thick] plot(\x,6-1*\x) node[left]{};
+
+\draw [-,samples=100,domain=0:6,red,dashed, thick] plot(\x,4-1*\x) node[left]{};
+
+
+\draw[black,domain=0.5:4] plot (\x-0.2,{4*exp(-1.5*\x)+(2.78 - 4*exp(1.5*-1.5))}) ;
+\draw[blue,domain=0.5:4,ultra thick] plot (\x,{4*exp(-1.5*\x)+(4.6 - 4*exp(1.5*-1.5))}) ;
+
+
+\draw[-*] (4,2) -- (4,2) node[below] {};
+\draw (0,2) node[left]{$Y_{d2}$};
+\draw (4,0) node[below]{$Y_{d1}$};
+\draw[dotted,-] (4,0) -- (4,2) node[left] {};
+\draw[dotted,-] (0,2) -- (4,2) node[left] {};
+
+\draw[->] (-0.2,0) -- (13,0) node[below right] {$C_1$};
+\draw[->] (0,-0.2) -- (0,7) node[left] {$C_2$};
+
+\draw (0,3) node[left]{$(1+r) W$};
+\draw (0,6) node[left]{$(1+r^\prime) W$};
+
+
+\draw (2,0) node[below]{$C^*_{1}$};
+\draw[-*] (2,2.5) -- (2,2.5) node[above] {E1};
+\draw[dotted,-] (2,0) -- (2,2.5) node[left] {};
+
+\draw[blue] (1.25,0) node[below]{$C^{*\prime}_{1}$};
+\draw[-*,black] (1.25,4.82) -- (1.25,4.82) node[right] {E2};
+\draw[dotted,-,blue] (1.25,0) -- (1.25,4.82) node[left] {};
+
+\draw[-*,red] (1,3.02) -- (1,3.02) node[above] {A};
+\draw[dotted,-,red] (1,0) -- (1,3.02) node[left] {};
+
+\draw[<-] (1,0.5) -- (2,0.5) node[below] {};
+\draw[->] (1,1.5) -- (1.25,1.5) node[below] {};
+
+\draw[black] (1.5,0.47) node[below]{ES};
+\draw[black] (1.1,1.47) node[below]{ER};
+
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+
+\end{document}

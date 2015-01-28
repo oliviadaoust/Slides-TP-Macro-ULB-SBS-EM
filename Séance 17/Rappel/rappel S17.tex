@@ -1,0 +1,175 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{ulem}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 17/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\author{Olivia D'Aoust\\
+odaoust@ulb.ac.be}
+\date{3 avril 2014}
+\title{Séance 17 \\ IS-LM}
+\begin{document}
+\frame{\titlepage}
+\normalsize
+
+\frame{
+\frametitle{Demande agrégée}
+
+La demande agrégée équivaut à la somme de la demande agrégée intérieure (cf. Séance 13) et la demande agrégée extérieure (cf. Séance 14).
+
+\begin{center}
+DA = C + I + G +  X - M
+\end{center}
+
+Hypothèses : 
+
+\begin{enumerate}
+\item $C = a + c Y_d$ (la consommation suit une fonction keynesienne)
+\begin{itemize}
+\item $Y_d = Y - tY = (1-t) Y$
+\end{itemize}
+\item M = m Y (les importations évoluent proportionnellement au PNB)
+\item Y = DA (la demande agrégée est \textbf{cohérente})
+\end{enumerate}
+
+\begin{center}
+Par les hypothèses (1) et (2), DA =  a + c (1-t) Y + I + G +  X -  m Y\\
+\begin{block}{}
+\begin{center}
+$\rightarrow$ DA =  a + I + G +  X + [c (1-t) - m ] Y 
+\end{center}
+\end{block}
+Si Y = DA (hypothèse 3), Y =   a + I + G +  X + [c (1-t) - m ] Y\\
+\begin{block}{}
+\begin{center}
+$\rightarrow Y = \frac{1}{1 - c (1-t) + m} ( a + I + G +  X)  $
+\end{center}
+\end{block}
+\end{center}
+
+}
+
+\frame{
+\frametitle{Demande agrégée}
+
+Graphiquement, 
+
+\includegraphics[clip=true, trim = 2cm 3cm 2cm 3cm, scale=0.5]{DA.pdf}
+
+}
+
+\frame{
+\frametitle{IS}
+\begin{columns}
+\begin{column}{7cm}
+\includegraphics[clip=true, trim = 5.5cm 0cm 4cm 0cm, scale=0.4]{IS.pdf}
+\end{column}
+\begin{column}{5cm}\footnotesize
+Une variation du taux d'intérêt nominal a un impact sur la demande agrégée (à travers les investissements). \\[0.3cm]
+Si i baisse, les investissements augmentent, et la demande agrégée augmente (se déplace vers le haut). \\[0.3cm]
+Si la demande agrégée est cohérente (Y = DA), Y augmente. IS représente le lieu où les combinaisons (Y,i) assurent l'équilibre sur le marché des biens et services.\\[0.3cm]
+IS traduit une relation négative entre Y et le taux d'intérêt nominal.
+\end{column}
+\end{columns}
+}
+
+\frame{
+\frametitle{LM}
+\footnotesize
+Les variations de la demande et de l'offre de monnaie ont un impact sur le taux d'intérêt. Si le revenu augmente, la demande de monnaie augmente. Ld se séplace vers le haut et vers la droite. Cela conduit à une hausse du taux d'intérêt. \\[0.3cm]
+LM représente le lieu où les combinaisons (Y,i) assurent l'équilibre sur le marché monétaire.\\[0.3cm] LM traduit une relation positive entre la demande de monnaie et le taux d'intérêt.
+
+\includegraphics[clip=true, trim = 2cm 4cm 3cm 3cm, scale=0.45]{LM.pdf}
+}
+
+\frame{
+\frametitle{IS-LM}
+
+Le modèle IS (Investment, Savings) - LM (Liquidity, Money) permet de rendre compte des interactions entre le marché des biens et services, le marché de la monnaie et le marché des obligations. \\[0.3cm]
+\begin{columns}
+\begin{column}{7cm}
+\includegraphics[clip=true, trim = 7cm 5.5cm 5cm 4cm, scale=0.45]{ISLM.pdf}
+\end{column}
+\begin{column}{5cm}\footnotesize
+L'équilibre sur les marchés est représenté par l'intersection des courbes IS et LM. \\
+\begin{itemize}
+\item Une politique budgétaire expansionniste (restrictive) déplace IS vers la droite (gauche)
+\item Une politique monétaire expansionniste (restrictive) déplace LM vers la droite (gauche)
+\end{itemize}
+\end{column}
+\end{columns}
+
+}
+
+
+
+
+\frame{
+\frametitle{Exercices supplémentaires}
+\footnotesize
+\textbf{Exercice 6}\\
+X = 200 \\
+C = 4870 \\
+$c_{Y_d}$ = 0.84\\
+$c_Y$ = 0.59\\
+multiplicateur = 1.95\\[0.3cm]
+\textbf{Exercice 7}\\
+
+\begin{table}[h!]
+\footnotesize
+\begin{tabular}{lccc}
+\hline
+&Marché B\&S & Marché monétaire & Marché obligataire \\
+\hline
+A& Equilibre & Offre excédentaire & Demande excédentaire \\
+B& Offre excédentaire & Equilibre & Equilibre \\
+C&équilibre&Demande excédentaire& Offre excédentaire\\
+D&Demande excédentaire&Demande excédentaire& Offre excédentaire\\
+E&Equilibre&Equilibre&Equilibre\\
+F&Demande excédentaire&Equilibre&Equilibre\\
+G&Demande excédentaire& Offre excédentaire&Demande excédentaire\\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Exercice 8}\\
+Les propositions a) et d) sont correctes \\[0.3cm]
+\textbf{Exercice 9}\\
+Les propositions c), e), i), k) et l) sont correctes \\[0.3cm]
+}
+
+
+\end{document}

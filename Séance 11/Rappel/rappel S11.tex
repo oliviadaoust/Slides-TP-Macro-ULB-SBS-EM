@@ -1,0 +1,315 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=blue,%
+    filecolor=blue,%
+    linkcolor=blue,%
+    urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+ \leavevmode
+  \hbox{
+  \begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot}    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+ Séance 11 /    \insertframenumber{} \hspace*{4ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\usepackage{color}
+
+\date{13 février 2014}
+
+\title{Séance 11 \\ Données macroéconomiques}
+
+\begin{document}
+
+\frame{
+\frametitle{Quadri 2}
+
+Si vous avez des questions : odaoust@ulb.ac.be\\[0.5cm]
+
+\textbf{Agenda}
+
+\begin{itemize}
+\item 8 séances de TP + corrections, Q\&A 
+\item Interro 3 (13 mars 2014)
+\item Interro 4 (24 avril 2014)
+\item Interro Recap (à définir)
+\item Travail d'actu (en groupe)
+\end{itemize}
+
+}
+
+\frame{
+\frametitle{Macro vs Micro}
+\centering
+\includegraphics[scale=0.25]{20130919.png}
+
+}
+
+
+\frame{\titlepage}
+
+
+\frame{
+\frametitle{Les basiques}
+ 
+\begin{enumerate}
+\item Stock vs Flux : $\Delta$ stock = flux
+\item On distingue 4 catégorie d'agents
+\begin{itemize}
+\item Les ménages
+\item Les entreprises
+\item L'Etat
+\item Le reste du monde (RdM)
+\end{itemize}
+\item Produit National Brut
+\begin{itemize}
+\item valeur de la production par les facteurs de productions \textbf{nationaux} au cours d'une période de temps
+\item 3 façon de comptabiliser le PNB : production, dépenses, revenus
+\begin{itemize}%exercice 2, 3
+\item PNB nominal : à prix courant (t) 
+\item PNB réel : à prix constant ($t_{ref}$) 
+\item Déflateur = $\frac{\mbox{PNB Nominal}}{\mbox{PNB réel}}$ = 1 + $\pi$ (inflation)
+\item PNB par tête : $\frac{\mbox{PNB réel}}{\mbox{population}}$
+\end{itemize}
+\end{itemize}
+\item Produit Intérieur Brut
+\begin{itemize}
+\item valeur de la production par les facteurs de productions \textbf{à l'intérieur des frontières} de l'économie au cours d'une période de temps
+\item En \emph{économie fermée}, PIB = PNB 
+\end{itemize}
+
+\end{enumerate}
+
+}
+
+\frame{
+\frametitle{PNB Optique Production}
+\framesubtitle{Somme des valeurs ajoutées}
+%exercice 1
+
+\begin{block}{}
+\begin{equation}\nonumber
+\mbox{valeur ajoutée} = \underbrace{p.q}_{\mbox{valeur des outputs}} - \mbox{     valeur des inputs}
+\end{equation}
+\end{block}
+
+\begin{equation}\nonumber
+PIB = \sum \mbox{valeurs ajoutées}
+\end{equation}
+
+\begin{equation}\nonumber
+PNB = PIB + \mbox{Revenus nets}
+\end{equation}\\[0.5cm]
+
+Revenus nets = RFP perçus du RdM - RFP versés au RdM\\
+
+
+}
+
+
+
+\frame{
+\frametitle{PNB Optique Dépense}
+\framesubtitle{Aggrégation des dépenses des agents économiques  }
+
+\begin{itemize}
+\item Consommation des \emph{ménages} : C
+\item Dépenses d'investissement des \emph{entreprises} : I
+\item Dépenses publiques de l'\emph{Etat}: G
+\item Exportations nettes du \emph{RdM} : X (exports) - Z (imports)
+\end{itemize}
+
+\begin{block}{}
+\begin{equation}
+PNB_{pm} \equiv C + I + G + \underbrace{(X - Z)}_{BOC}
+\end{equation}
+\end{block}
+
+
+
+%\vspace{0.5cm}
+%La balance des opérations courantes (BOC) est la différence entre la valeur des exportations et importations de biens et services. Elle est également \emph{la variation des avoirs extérieurs net d'un pays}
+
+
+}
+
+
+\begin{frame}[shrink]
+\frametitle{PNB Optique Revenu}
+\framesubtitle{Revenus des facteurs de productions (capital, travail)}
+
+\begin{itemize}
+\item Revenus du travail et du capital, payés par l'entreprise : Y
+\item Impots indirects (sur les ventes) : Ti
+\item Subsides 
+\item Amortissements
+\end{itemize}
+
+\begin{block}{}
+\begin{equation}
+PNB_{pm} = Y + (Ti - \mbox{subside}) + Am
+\end{equation}
+\end{block}
+
+
+
+\begin{block}{}
+\begin{equation}\nonumber
+\begin{array}{ll}
+PNN_{pm} = PNB_{pm} - Am&\\
+PNB_{cf} = PNB_{pm} - Ti + \mbox{subside}&= Y + Am\\
+PNN_{cf} = PNB_{cf} - Am &= Y\\
+\end{array}
+\end{equation}
+\end{block}
+Si l'on considère le revenu disponible:
+
+\begin{block}{}
+\begin{equation} %exercice 4
+Y_d \equiv Y + B - Td \equiv C + S 
+\end{equation}
+\end{block}
+où 
+
+\begin{itemize}
+\item B sont les transferts vers les ménages
+\item Td sont les taxes directes
+\item S est l'épargne des ménages
+\end{itemize}
+
+\end{frame}
+
+\frame{
+\frametitle{Identité macro-économique fondamentale}
+\framesubtitle{A partir de (1), (2) et (3)...}
+
+
+
+\begin{center}
+\begin{block}{}%exercice 5
+\centering
+S - $I_{net} \equiv $  BOC + Déficit Public
+\end{block}
+\end{center}
+
+avec 
+\begin{equation}\nonumber
+\mbox{déficit public} = \underbrace{G + B + \mbox{Subsides}}_{\text{\parbox{5em}{Dépenses de l'Etat}}} - \underbrace{T_i - T_d}_{\text{\parbox{5em}{Revenus de l'Etat}}}
+\end{equation}
+
+et \hspace{+2cm } I$_{net}$ = I - Am \\
+et \hspace{+2cm}  I = FBCF + $\Delta$ Stocks\\[0.5cm]
+
+S - $I_{net}$ est l'épargne nette du secteur privée, et elle est égale au décifit de l'état plus la balance des opérations courantes
+
+
+
+}
+
+\frame{
+\frametitle{Balance des opérations courantes (BOC)}
+\framesubtitle{Variation des avoirs extérieurs nets}
+\begin{center}
+
+
+\begin{block}{}
+\begin{equation}\nonumber
+BOC = \underbrace{ X_b - M_b}_{_{\text{\parbox{10em}{Balance commerciale}}}} + \underbrace{ X_s - M_s + Rev. Nets}_{_{\text{\parbox{10em}{Balance des Services }}}} + Transferts  %ex 6a
+\end{equation}
+ \end{block}
+\end{center}
+
+}
+
+\frame{
+\frametitle{Balance des paiements}
+\framesubtitle{et Balance des règlements officiels (BRO)}
+\begin{center}
+
+\begin{block}{}
+BRO =  Balances des opérations courante (BOC) \\
+\hspace{+1.3cm} + Balance des capitaux (LT et CT) \\
+\hspace{+1.3cm} + Erreurs et omissions
+\end{block}
+\end{center}
+\vspace{-0.3cm}
+BRO $> 0 \rightarrow$ accroissement des réserves de change \\
+BRO $< 0 \rightarrow$ baisse des réserves de change \\[0.5cm]
+
+\begin{center}
+\begin{block}{}
+Balance des paiements = BRO + $\Delta$ réserves officielles
+\end{block}
+\end{center}
+
+}
+
+
+\frame{
+\frametitle{Exercices supplémentaires}
+
+8. Calculez
+
+\begin{enumerate}[a)]
+\item PNB pm = 1550 
+\item PIB pm =1550
+\item PNN pm = 1450
+\item  PNB cf = 1600
+\item PNN cf = 1500
+\item PNB pm réel par tête = 2.82 (en milliers de \$)\\[0.5cm]
+\end{enumerate} 
+
+9.Vrai/Faux \\[0.1cm]
+
+Les réponses correctes sont : c), f), g), i), j), k), n), p), q)
+
+
+
+}
+
+%\frame{
+%\frametitle{Actualité}
+%
+%A lire, et à voir
+%\begin{columns}
+%\begin{column}[l]{5cm}
+%\begin{itemize}
+%\item Inside Job, dir. Charles Ferguson 
+%\item Parienty, A. (2011) "Bref Rappel sur la Grèce", \emph{Alternatives Economiques}
+%\end{itemize}
+%\end{column}
+%\begin{column}[c]{6cm}
+%\vspace{-1cm}
+%\begin{center}
+%\includegraphics[scale=0.3]{InsideJob.jpg}
+%\end{center}
+%\end{column}
+%\end{columns}
+%
+%
+%}
+
+
+
+\end{document}

@@ -1,0 +1,238 @@
+\documentclass [blue] {beamer}
+\usepackage{beamerthemesplit}
+\usetheme{Boadilla}
+%\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{}
+\usepackage [latin1] {inputenc}
+\usepackage [T1] {fontenc}
+\usepackage [french] {babel}
+\usepackage {indentfirst}
+%\usepackage {graphicx}
+\usepackage {geometry}
+\usepackage{verbatim}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\newtheorem{proposition}[theorem]{Proposition}
+\usepackage{empheq}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\hypersetup{colorlinks, citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+%\setbeamertemplate{blocks}[shadow=false]
+\setbeamercovered{transparent}
+\defbeamertemplate*{footline}{my theme}
+{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right,ignorebg]{date in head/foot} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+Séance 14/ \insertframenumber{} \hspace*{4ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+\usepackage{color}
+\date{6 mars 2014}
+\title{Séance 14 \\ Demande agrégée extérieure \\ (BOC)}
+\author{Olivia D'Aoust\\
+odaoust@ulb.ac.be}
+
+\begin{document}
+\frame{\titlepage}
+
+%\frame{
+%\frametitle{Balance des Opérations Courantes}
+%
+%Rappel : BOC = Exportations - Importations\\
+%\hspace{3cm}$\rightarrow$ Demande extérieure nette\\[0.3cm]
+%
+%3 approches : 
+%
+%\begin{enumerate}
+%\item \textbf{Variation des avoirs extérieurs nets} : évalue l'endettement d'un pays par rapport au RDM
+%\item\textbf{Absorption} : évalue si un pays vit au dessus ou en dessous de ses moyens
+%\item \textbf{Epargne privée et publique} : évalue la suffisance de l'épargne privée et publique pour financer le déficit courant
+%\end{enumerate}
+%
+%
+% }
+
+\frame{
+\frametitle{Balance des Opérations Courantes}
+\framesubtitle{1. Variation des avoirs extérieurs nets}
+
+
+
+La BOC est liée à la balance des capitaux. Si on a une BOC $>0$, on exporte plus que l'on importe, et il y a donc une entrée de capitaux positive en Belgique, càd des avoirs extérieurs nets positifs vis-à-vis du RDM. Une BOC $<0$ signifie au contraire que l'on s'endette vis-à-vis du RDM \\[0.3cm]
+
+\scriptsize{Ignorons les erreurs et omissions, alors}\normalsize
+\begin{block}{}
+\begin{center}
+Balances des paiements = 0 
+\end{center}
+\end{block}
+
+Car les entrées/sorties de capitaux sont enregistrées comme $\Delta$ réserves officielles.\\
+\begin{block}{}
+\begin{center}
+\hspace{-2cm}Balance des paiements = BOC   \\\hspace{5cm}+ Balance des capitaux \\\hspace{4.8cm} + $\Delta$ réserves officielles
+\end{center}
+\end{block}
+
+
+ }
+
+\frame{
+\frametitle{Balance des Opérations Courantes}
+\framesubtitle{2. Absorption}
+
+La BOC peut également être liée à la consommation intérieure d'un pays. Plus on exporte, plus on peut se permettre de consommer à l'intérieur du pays. Une BOC $< 0$ au contraire, indique que l'on vit au-dessus de ses moyens. \\[0.3cm]
+
+\scriptsize{Ignorons les transfers, amortissements et taxes indirectes, alors PNB = Y et}\normalsize
+\begin{center}
+$Y = \underbrace{C + I + G}_{\text{Absorption (A)}} + BOC$
+\end{center}
+
+\begin{block}{}
+\begin{center}
+$Y -  A =  BOC$
+\end{center}
+\end{block}
+
+La BOC représente la différence entre les moyens d'un pays (Y) et les dépenses intérieures d'un pays (A).
+
+
+
+ }
+
+\frame{
+\frametitle{Balance des Opérations Courantes}
+\framesubtitle{3. Epargne publique et privée}
+
+La BOC est également présente dans l'indentité macroéconomique fondamentale. L'épargne privée et l'épargne publique financent celle-ci.\\[0.3cm]
+
+\begin{block}{}
+\centering
+S - $I_{net} \equiv $  BOC + Déficit Public
+\end{block}
+
+
+\scriptsize{Si Am = 0}\normalsize, on réécrit l'identité fondamentale comme
+\begin{center}
+BOC = (S - I) - (G - T)
+\end{center}
+
+ou encore
+
+\begin{center}
+\begin{block}{}
+\centering
+$BOC = \underbrace{( T + S)}_{\text{épargne publique et privée}} - \underbrace{(G + I)}_{\text{dépenses publiques et privées}}$
+\end{block}
+\end{center}
+
+ }
+
+\frame{
+\frametitle{La BOC et le taux d'intérêt}
+
+Etant donné que la BOC dépend de l'épargne nette publique et privée, elle dépend du taux d'intérêt, dont la variation a un impact sur l'épargne et les investissements. \\[0.3cm]
+
+\begin{columns}
+\begin{column}{5.5cm}
+Si les taux d'intérêt augmentent, $\Delta^+$  r
+\begin{itemize}
+\item Il est plus rentable de placer son argent $\rightarrow \Delta^+$ S
+\item Cela coûte plus cher d'investir (soit en empruntant, soit relativement à ce qu'on aurait gagné en plaçant)  $\rightarrow \Delta^-$ I
+\end{itemize}
+\end{column}
+\begin{column}{5cm}
+\vspace{1cm}
+\includegraphics[clip=true,trim = 4cm 3cm 6cm 2cm,scale=0.3]{r.pdf}
+\end{column}
+\end{columns}
+}
+
+\frame{
+\frametitle{Détermination du taux d'intérêt sur le marché mondial}
+\framesubtitle{Rappel : BOC = (S+T) - (I + G)}
+\begin{columns}
+\begin{column}{10cm}
+\begin{center}
+\includegraphics[clip=true,trim =3cm 0cm 3cm 1cm,scale=0.4]{req.pdf} 
+\end{center}
+\end{column}
+\begin{column}{3cm}
+S + T > I + G\\
+BOC > 0\\
+\vspace{3cm}
+S + T < I + G\\
+BOC < 0
+\end{column}
+\end{columns}
+}
+
+\frame{
+\frametitle{Termes de l'échange}
+
+C'est un indice, ratio d'indice des prix.
+
+\begin{equation}\nonumber\small
+TE = \frac{P_X}{P_M}
+\end{equation}
+\small
+\begin{itemize}
+\item $\Delta^+$ TE: amélioration des termes de l'échange, pour un même panier d'exportations, le pays peut se permettre plus d'importations 
+\begin{itemize}
+\item $\leftrightarrow \Delta^+$ revenu réel
+\end{itemize}
+\item $\Delta^-$ TE: détérioration des termes de l'échange, pour un même panier d'exportations, le pays peut se permettre moins d'importations 
+\begin{itemize}
+\item $\leftrightarrow \Delta^-$ revenu réel
+\end{itemize}
+\end{itemize}
+\vfill
+\normalsize
+\textbf{Choc transitoire vs choc permanent}\\[0.2cm]
+
+
+On part du principe que les consommateurs \emph{lissent} leur consommation. Ils minimisent les variations de celle-ci.
+\small
+\begin{itemize}
+\item $\Delta^+ Y$ permanente : $\Delta^+ C$ (ils pourront \underline{toujours} se permettre plus de conso)
+\item $\Delta^+ Y$ transitoire : $\Delta^+ S$ (ils épargneront, afin d'étaler le choc positif sur la consommation future jusqu'au retour à la normale)
+\end{itemize}
+
+}
+
+%\frame{
+%\frametitle{Choc temporaire vs. choc permanent}
+%
+%L'impact d'un choc temporaire n'est pas le même que si le choc est permanent. On considère que les ménages "lissent" leur consommation, ils essaient de maintenir un certain niveau de consommation (c'est à cela que sert l'épargne). \\[0.3cm]
+%
+%Si on considère un choc sur le revenu,
+%
+%\begin{itemize}
+%\item Si le choc est transitoire, l'épargne est donc affectée. Si le choc est négatif, l'épargne diminue afin de maintenir le niveau de consommation.
+%\item Si le choc est permanent, la consommation est affectée. Si le choc est négatif, le ménage sera contraint de consommer moins pour toutes les périodes suivantes.
+%\end{itemize}
+%
+%
+%}
+
+\frame{
+\frametitle{Exercices supplémentaires}
+\textbf{Exercice 6}\\
+S - $I_{net}$ = 175  \\[0.3cm]
+\textbf{Exercice 7}\\
+La proposition c) est correcte \\[0.3cm]
+\textbf{Exercice 8}\\
+Les propositions b) et d) sont correctes \\[0.3cm]
+\textbf{Exercice 9}\\
+Les propositions c), e), f), i), k), l), n) et o) sont correctes \\[0.3cm]
+}
+\end{document}
